@@ -1,0 +1,33 @@
+$pad: (
+    inL: inline,
+    bl: block,
+    sm: 3px,
+    normal: 5px,
+    md: 10px,
+    lg: 15px,
+    xl: 20px,
+    xxl:25px
+);
+
+$margin: (
+    inL: inline,
+    bl: block,
+    sm: 3px,
+    normal: 5px,
+    md: 10px,
+    lg: 15px,
+    xl: 20px,
+    xxl:25px
+);
+
+@mixin ($value: null) {
+    .custom-margin {
+        @if $value {
+            margin: $value;
+        }
+
+        @else {
+            margin: 10px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@each $button, $color in $buttons {
+    .button-#{$button} {
+        background-color: $color;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        margin: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken($color, 10%);
+        }
+    }
+}
+
+.headline {
+    @each
+}

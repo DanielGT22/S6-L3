@@ -1,0 +1,137 @@
+@import 'partials/reset';
+@import 'partials/colors';
+@import 'partials/spaziature';
+@import 'partials/bottoni';
+@import 'partials/font';
+@import 'partials/mixIns';
+@import 'partials/animazioni';
+
+
+
+header {
+
+    background-color: navajowhite;
+
+    nav {
+        display: flex;
+        justify-content: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .primo {
+        width: 50%;
+
+        img {
+            width: 5em;
+        }
+    }
+
+    .secondo {
+        width: 50%;
+        vertical-align: middle;
+    }
+
+    ul {
+
+        display: flex;
+
+        justify-content: space-around;
+        align-items: center;
+
+        li {
+            list-style: none;
+            padding: 1em;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+    }
+}
+
+.headline {
+    background-color: beige;
+    padding: 5px;
+    text-align: center;
+
+    input {
+
+        background-color: violet;
+        border-radius: 15px;
+        border: none;
+        margin: 10px;
+
+        &:hover {
+            transform: scale(1.4);
+            background-color: aqua;
+        }
+    }
+}
+
+.hero {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    background-color: red;
+    padding: 5px;
+
+    .img {
+        width: 50%;
+
+        img {
+            width: 100%;
+            border-radius: 20px;
+        }
+    }
+
+    .text {
+        text-align: center;
+        margin-left: 10px;
+        width: 50%;
+        background-color: aquamarine;
+        font-size: 1.5em;
+        border-radius: 20px;
+        padding: 1em;
+    }
+}
+
+.grid {
+    width: 90%;
+    display: grid;
+    column-gap: 4em;
+    grid-template-columns: auto auto;
+
+    padding: 2em;
+
+
+    .grid-item {
+        border: 1px solid rgba(0, 0, 0, 0.8);
+
+        margin-bottom: 5px;
+        font-size: 30px;
+        text-align: center;
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
